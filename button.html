@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/izitoast/dist/css/iziToast.css">
+    <link rel="stylesheet" href="assets/css/button.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="success-box">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth happy"></div>
+            </div>
+            <div class="shadow scale"></div>
+            <div class="message">
+                <h1 class="alert">Success!</h1>
+                <p>VUI THÌ CLICK VÀO ĐÂY.</p>
+            </div>
+            <button id="btnSuccess" class="button-box">
+                <h1 class="green">CLICK</h1>
+            </button>
+        </div>
+        <div id="error-box">
+            <div class="dot"></div>
+            <div class="dot two"></div>
+            <div class="face2">
+                <div class="eye"></div>
+                <div class="eye right"></div>
+                <div class="mouth sad"></div>
+            </div>
+            <div class="shadow move"></div>
+            <div class="message">
+                <h1 class="alert">Error!</h1>
+                <p>BUỒN THÌ CLICK VÀO ĐÂY.</p>
+            </div>
+            <button id="btnError" class="button-box">
+                <h1 class="red">CLICK</h1>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>made by <a href="https://codepen.io/juliepark"> julie</a> ♡
+    </footer>
+    <script src="/assets/izitoast/dist/js/iziToast.min.js"></script>
+    <script src="/assets/jquery/v3.6.1/jquery-3.6.1.min.js"></script>
+    <script>
+        $("#btnSuccess").on("click", ()=>{
+            iziToast.success({
+                title: '🙂',
+                position: 'topLeft',
+                timeout: Math.random() * 10000,
+                message: "MÌNH CHỈ LÀ NGƯỜI ĐẾN SAU"
+            });
+        })
+
+        $("#btnError").on("click", ()=>{
+            iziToast.error({
+                title: '☹️',
+                position: 'topRight',
+                timeout: Math.random() * 10000,
+                message: "MÌNH CHỈ LÀ NGƯỜI ĐẾN SAU"
+            });
+        })
+    </script>
+</body>
+
+</html>
